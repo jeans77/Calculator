@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.theironyard</groupId>
-	<artifactId>first-project</artifactId>
+	<artifactId>play-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>first-project</name>
+	<name>play-project</name>
 	<description>An introductory project to show how to serve and modify Web assets as well as understand the basics of Java and an MVC framework.</description>
 
 	<parent>
