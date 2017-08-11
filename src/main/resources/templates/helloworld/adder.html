@@ -1,22 +1,20 @@
 <!doctype html>
-
 <html>
 
   <head>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/site.css">
   </head>
   
   <body>
-    <h1>Welcome to Play Project!</h1>
-    
-    <h2>Strings Magic1
-    	{{> helloworld/case-form }}
-    </h2>
-    
-    <h2>Numbers magic1	
+    <h1>Numbers Magic2</h1>
+    <p>
+      <b>Result:</b>
+      {{ adder }}
+    </p>
+
     {{> helloworld/adder-form }}
-    </h2>
-    
+
   </body>
   
 </html>

@@ -1,24 +1,20 @@
 package com.example.demo.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.models.Adder;
-import com.example.demo.models.Decap;
 import com.example.demo.models.Case;
 
 @Controller
-@RequestMapping({"/", "/HelloWorld"})
-public class HelloWorldController {
+@RequestMapping({"/HelloWorld"})
+public class StringController {
 	
 	private String title;
 	
-	public HelloWorldController() {
+	public StringController() {
 		title = "Hello there!";
 	}
 	
@@ -42,16 +38,6 @@ public class HelloWorldController {
 //		return mv;
 //	}
 
-/*	@GetMapping("Case")
-	public ModelAndView Decap(@RequestParam(required=false, defaultValue="«silence»") String submittedMessage) {
-		ModelAndView mv = new ModelAndView("helloworld/message");
-		mv.addObject("title", title);
-		Decap decap = new Decap(submittedMessage);
-		String result = decap.decapitalize();
-		mv.addObject("decap", result);
-		return mv;
-	}
-*/	
 /*	@GetMapping("Decap")
 	public ModelAndView Decap(@RequestParam(required=false, defaultValue="«silence»") String submittedMessage) {
 		ModelAndView mv = new ModelAndView("helloworld/message");
@@ -73,16 +59,5 @@ public class HelloWorldController {
 		mv.addObject("case", result);
 		return mv;
 	}
-	 
-	@PostMapping("adder")
-	public String addTwoNumbers(@RequestParam(name="left") int first, @RequestParam(name="right") double second, Model model) {
-	//Declaring variable and decoration required importing the Adder Class from resources
-		Adder adder = new Adder (first, second);
-		double result = adder.calculate();
-		
-		model.addAttribute("sum", result);
-		return "helloworld/sum-result";
-	}
-
 	
 }
