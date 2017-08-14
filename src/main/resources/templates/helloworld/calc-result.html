@@ -9,10 +9,14 @@
 
  <body>
     	<a href="/">Back home</a>
-    	<h1>Result: {{ calc }} </h1>
-    	<h3>First: {{ first }}</h3>
-		<h3>Second: {{ second }}</h3>
-		<h3>Operator: {{ operator }}</h3>
+    	<br>
+    	<h1 style="display: inline"> Result: </h1>
+   
+    	<h3 style="display: inline">{{ first }}</h3> 
+    	<h3 style="display: inline">{{ action }}</h3> 
+    	<h3 style="display: inline">{{ second }}</h3>
+		<h1 style="display: inline"> = {{ calc }} </h1>
+		<br>
     	{{> helloworld/calc-form }}	
  </body>
 

@@ -38,32 +38,39 @@ public class CalculatorController {
 		String operator = action;
 	
 		if (operator.equals("add")) {
+			action = "+";
 			result = calc.add();
 		}
 		else if (operator.equals("sub")) {
+			action = "-";
 			result = calc.sub();
 		}
 		
 		else if (operator.equals("mlt")) {
+			action = "x";
 			result = calc.mlt();
 		}
 		
 		else if (operator.equals("div")) {
+			action = "/";
 			result = calc.div();
 		}
 		
 		else if (operator.equals("mod")) {
+			action = "%";
 			result = calc.mod();
 		}
 		
 		else if (operator.equals("exp")) {
+			action = "^";
 			result = calc.exp();
 		}
 
 		model.addAttribute("calc", result);
 		model.addAttribute("first", first);
+		model.addAttribute("action", action);
 		model.addAttribute("second", second);
-		model.addAttribute("operator", operator); 
+	 
 		return "helloworld/calc-result";
 	}
 
