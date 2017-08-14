@@ -6,52 +6,39 @@ html, body, input, select, textarea, button {
 
 html, body {
   font-size: 14px;
+  background: #ffffff;
 }
 
-input, button {
-  font-size: 16px;
+.calculator {
+	border: 10px solid blue;
+	padding: 1%;
+	width: 25%;
+	height: 25%;
+	color: #0000ff;
+	background: #c0c0c0;
+	float:left;
 }
-
-input[type="text"],
-input[type="number"] {
-  border: 0;
-  border-left: 4px solid transparent;
-  border-bottom: 2px solid #ECECEC;
-  outline: 0;
-  padding: 4px 0;
-}
-
-input[type="text"]:invalid,
-input[type="number"]:invalid {
-  border-left-color: #c5162c;
-  outline: 0;
-  box-shadow: none;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus {
-  border-bottom-color: #FF5555;
-}
-
-button {
-  border-radius: 0;
-  padding: 4px 8px;
-  border: 2px solid transparent;
-  background-color: #FF5555;
-  color: white;
-  outline: 0;
-}
-
 button:focus,
 button:hover {
   border-color: #FF5555;
-  background-color: transparent;
+  background-color: #00ff00;
   color: #FF5555;
 }
 
-button:active {
+button {
   border-color: #FF5555;
   background-color: #ff8982;
   color: black;
 }
 
+button:focus,
+button:hover {
+  border-color: #0000ff;
+  background-color: #00ff00;
+  color: #FF5555;
+}
+
+input[type="text"],
+input[type="number"] {
+background-color: #00ff00;
+}

@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 import com.example.demo.models.Calculator;
 
 @Controller
 @RequestMapping({"/","/HelloWorld"})
+
 public class CalculatorController {
 	
 	private String title;
@@ -25,14 +25,17 @@ public class CalculatorController {
 		return "helloworld/index";
 	}
 	
+	
+	@GetMapping("calc")
+	public String justShowTheForm() {
+		return "helloworld/calc";
+	}
+	
 	@PostMapping("calc")
-	public String calculator(@RequestParam(name="left") double first, @RequestParam(name="right") double second, Model model, String act, String action) {
+	public String calculator(@RequestParam(name="left") double first, @RequestParam(name="right") double second, Model model, String action) {
 		Calculator calc = new Calculator (first, second);
 		double result = -999999999;
-//		String operator = act;
 		String operator = action;
-
-//		String act = .getParameter("act");
 	
 		if (operator.equals("add")) {
 			result = calc.add();
@@ -58,6 +61,9 @@ public class CalculatorController {
 		}
 
 		model.addAttribute("calc", result);
+		model.addAttribute("first", first);
+		model.addAttribute("second", second);
+		model.addAttribute("operator", operator); 
 		return "helloworld/calc-result";
 	}
 

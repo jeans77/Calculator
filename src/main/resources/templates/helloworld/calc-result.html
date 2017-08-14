@@ -6,10 +6,15 @@
     <link rel="stylesheet" href="/site.css">
   </head>
   
-  <body>
-    <a href="/">Back home</a>
-    <h1>Your Result: {{ calc }}</h1>
-    {{> helloworld/calc-form }}
-  </body>
-  
+
+ <body>
+    	<a href="/">Back home</a>
+    	<h1>Result: {{ calc }} </h1>
+    	<h3>First: {{ first }}</h3>
+		<h3>Second: {{ second }}</h3>
+		<h3>Operator: {{ operator }}</h3>
+    	{{> helloworld/calc-form }}	
+ </body>
+
+
 </html>
